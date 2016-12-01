@@ -45,7 +45,7 @@ class Racer
   def self.paginate(params)
     Rails.logger.debug("paginate(#{params})")
     page=(params[:page] ||= 1).to_i
-    limit=(params[:per_page] ||= 30).to_i
+    limit=(params[:per_page] ||= 10).to_i
     skip=(page-1)*limit
     sort=params[:sort] ||= {:number=>1}
 
